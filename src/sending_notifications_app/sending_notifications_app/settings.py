@@ -162,3 +162,4 @@ LOGGING = {
         "PIL": {"level": "WARNING", "handlers": ["console_handler"]},
     },
 }
+SESSION_COOKIE_SECURE = True
