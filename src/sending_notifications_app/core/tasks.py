@@ -49,7 +49,7 @@ def send_messages_task(mailing_id: int) -> None:
                     mailing_id=mailing_id,
                     client_id=client_id
                 )
-                response = requests.post(url, json=payload, headers=headers)
+                response = requests.post(url, json=payload, headers=headers, timeout=60)
                 if response.status_code == 200:
                     message.status = 'sent'
                     message.save()
